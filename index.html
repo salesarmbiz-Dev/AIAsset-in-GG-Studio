@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AI Asset Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --deep-navy: #012840;
+        --orange: #F27405;
+        --turquoise: #05F2F2;
+        --red: #FF4B4B;
+        --purple: #8B5CF6;
+        --green: #58CC02;
+        --gold: #FFD700;
+      }
+      body {
+        font-family: 'Noto Sans Thai', sans-serif;
+        background-color: var(--deep-navy);
+        color: white;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(1, 40, 64, 0.5); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(5, 242, 242, 0.3); 
+        border-radius: 3px;
+      }
+
+      /* Global Keyframes */
+      @keyframes fadeSlideUp {
+        0% { opacity:0; transform:translateY(8px) }
+        100% { opacity:1; transform:translateY(0) }
+      }
+      @keyframes fadeSlideRight {
+        0% { opacity:0; transform:translateX(-12px) }
+        100% { opacity:1; transform:translateX(0) }
+      }
+      @keyframes fadeSlideLeft {
+        0% { opacity:0; transform:translateX(12px) }
+        100% { opacity:1; transform:translateX(0) }
+      }
+      @keyframes scaleIn {
+        0% { opacity:0; transform:scale(.5) }
+        100% { opacity:1; transform:scale(1) }
+      }
+      @keyframes drawLine {
+        0% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { box-shadow: 0 0 10px rgba(242, 116, 5, 0.2); }
+        50% { box-shadow: 0 0 20px rgba(242, 116, 5, 0.5); }
+      }
+      @keyframes slideUp {
+        0% { transform: translateY(100%); }
+        100% { transform: translateY(0); }
+      }
+
+      /* Animation Utility Classes */
+      .anim-fadeSlideUp { animation: fadeSlideUp 0.5s ease-out forwards; opacity: 0; }
+      .anim-fadeSlideRight { animation: fadeSlideRight 0.5s ease-out forwards; opacity: 0; }
+      .anim-fadeSlideLeft { animation: fadeSlideLeft 0.5s ease-out forwards; opacity: 0; }
+      .anim-scaleIn { animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; opacity: 0; }
+      .anim-drawLine { animation: drawLine 0.5s linear forwards; stroke-dasharray: 200; stroke-dashoffset: 200; }
+      .anim-slideUp { animation: slideUp 0.3s ease-out forwards; }
+
+      /* Custom Range Slider */
+      input[type=range] {
+        -webkit-appearance: none;
+        background: transparent;
+        width: 100%;
+      }
+      input[type=range]:focus {
+        outline: none;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background: #ffffff;
+        margin-top: -10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        cursor: pointer;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 8px;
+        cursor: pointer;
+        background: linear-gradient(to right, #05F2F2, #F27405);
+        border-radius: 4px;
+      }
+      /* Firefox */
+      input[type=range]::-moz-range-thumb {
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: none;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        cursor: pointer;
+      }
+      input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 8px;
+        cursor: pointer;
+        background: linear-gradient(to right, #05F2F2, #F27405);
+        border-radius: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.39.3",
+    "recharts": "https://esm.sh/recharts@2.15.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
